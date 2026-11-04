@@ -1,68 +1,107 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:1c1c1c,60:2f5a1f,100:87cf3e&text=Juan%20Ordo%C3%B1ez&fontColor=ffffff&fontSize=52&fontAlignY=34&desc=jordonez-usac&descSize=18&descAlignY=56&animation=fadeIn" width="100%" alt="Juan Ordoñez">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=190&color=0:0b1220,55:1f4fbf,100:5ff3ff&text=Juan%20Ordo%C3%B1ez&fontColor=ffffff&fontSize=52&fontAlignY=34&desc=jordonez-usac&descSize=18&descAlignY=56&animation=fadeIn" width="100%" alt="Juan Ordoñez">
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=87CF3E&center=true&vCenter=true&width=640&lines=Estudiante+de+Ingenier%C3%ADa+en+Ciencias+y+Sistemas;Construyendo+KubeTrek%3A+Kubernetes+que+se+ve+en+vivo;Hice+SmashGT+para+la+escena+de+Smash+en+Guatemala;Linux%2C+Go%2C+contenedores+e+IoT" alt="Estudiante de Ingeniería en Ciencias y Sistemas. Construyendo KubeTrek. Hice SmashGT. Linux, Go, contenedores e IoT.">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=2800&pause=900&color=4DA3FF&center=true&vCenter=true&width=640&lines=Estudiante+de+Ingenier%C3%ADa+en+Ciencias+y+Sistemas;Construyendo+KubeTrek%3A+Kubernetes+que+se+ve+en+vivo;Linux%2C+Go%2C+contenedores+e+IoT" alt="Estudiante de Ingeniería en Ciencias y Sistemas. Construyendo KubeTrek. Linux, Go, contenedores e IoT.">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Linux_Mint-22.3-87CF3E?style=flat-square&logo=linuxmint&logoColor=white" alt="Linux Mint 22.3">
-  <img src="https://img.shields.io/badge/USAC-Guatemala-1c1c1c?style=flat-square" alt="USAC, Guatemala">
-  <img src="https://komarev.com/ghpvc/?username=jordonez-usac&color=87cf3e&style=flat-square&label=visitas" alt="Visitas al perfil">
+  <img src="https://img.shields.io/badge/Linux_Mint-22.3-3a7bff?style=flat-square&logo=linuxmint&logoColor=white" alt="Linux Mint 22.3">
+  <img src="https://img.shields.io/badge/USAC-Guatemala-0b1220?style=flat-square" alt="USAC, Guatemala">
+  <img src="https://komarev.com/ghpvc/?username=jordonez-usac&color=3a7bff&style=flat-square&label=visitas" alt="Visitas al perfil">
 </p>
 
 <p align="center">
   <img src="assets/neofetch.svg" width="780" alt="neofetch de juan@usac: Linux Mint, zsh, estudiante de Ingeniería en Ciencias y Sistemas en la USAC. Lenguajes: Go, JavaScript, Python, C++ y Java.">
 </p>
 
-## `~/proyectos`
+## `~/proyectos/kubetrek`
+
+<a href="https://github.com/kubetrek/kubetrek"><img src="assets/kubi.jpg" width="100%" alt="Kubi, el asistente de KubeTrek"></a>
+
+<h3 align="center"><a href="https://github.com/kubetrek/kubetrek">KubeTrek</a></h3>
+
+<p align="center">Aprende Kubernetes en tu propia terminal mientras la web te muestra en vivo lo que pasa en tu clúster.</p>
+
+<p align="center">
+  <a href="https://github.com/kubetrek/kubetrek"><img src="https://img.shields.io/badge/C%C3%B3digo-0b1220?style=for-the-badge&logo=github&logoColor=white" alt="Código"></a>
+  <img src="https://img.shields.io/badge/Go-1.26-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go 1.26">
+  <img src="https://img.shields.io/badge/Roadmap-3%2F8-3a7bff?style=for-the-badge" alt="Roadmap 3 de 8">
+</p>
+
+Kubernetes es difícil de aprender solo: escribes `kubectl apply`, recibes una línea de texto y todo lo demás pasa sin que lo veas. KubeTrek levanta un clúster real con kind en tu máquina, tú trabajas con `kubectl` de verdad, y la web dibuja cómo aparecen, cambian y mueren Deployments, ReplicaSets, Pods y Services. Cada paso se verifica solo, cada módulo termina con algo roto a propósito para que lo arregles, y Kubi te acompaña con pistas.
+
+<details>
+  <summary><b>Cómo funciona</b></summary>
+
+```
+ clúster kind  ◄─ watch ─  ktrek  ── WebSocket ──►  servidor  ── WebSocket ──►  navegador
+ (tu máquina)                                       KubeTrek                   (grafo, pasos, Kubi)
+```
+
+`ktrek` vigila el namespace de la lección y manda los cambios a la web. Solo envía metadatos y estado, nunca el contenido de los Secrets ni los valores de las variables de entorno. La conexión sale de tu máquina, así que no hay que abrir puertos.
+
+</details>
+
+<details>
+  <summary><b>Cómo se ve un módulo</b></summary>
+
+**Pods y Deployments**
+
+1. Aplica tu primer Deployment. ✓ 1 réplica lista
+2. Borra un Pod y mira cómo aparece otro. ✓ el estado deseado en acción
+3. Escala a 3. ✓ 3 réplicas listas
+4. Despliega `nginx:1.27` y míralo en el grafo. ✓ todos los Pods con la imagen nueva
+5. Regresa con `kubectl rollout undo`. ✓ revisión anterior
+
+**Reto:** "Se desplegó una versión nueva y la app está caída. Arréglala."
+
+</details>
+
+<details>
+  <summary><b>Ruta de aprendizaje</b></summary>
+
+| Nivel | Temas |
+|---|---|
+| 1. Fundamentos | Arquitectura, Pods, Deployments, Services, ConfigMaps y Secrets |
+| 2. Construir sobre Kubernetes (CKAD) | Probes, almacenamiento, Jobs, Ingress y Gateway API, Helm, Kustomize |
+| 3. Operar el clúster (CKA) | Scheduling, RBAC, NetworkPolicies, autoescalado, backups de etcd |
+| 4. Producción (SRE) | Prometheus, Grafana, Loki, Argo CD, Pod Security, operators |
+
+</details>
+
+<details>
+  <summary><b>Roadmap</b></summary>
+
+- [x] Experimentos técnicos (kind como librería, audit log, informers, consumo)
+- [x] `ktrek up` / `ktrek down`, con apagado automático por inactividad
+- [x] Agente que convierte los cambios del clúster en mensajes para la web
+- [ ] Servidor relay y `ktrek connect`
+- [ ] Grafo en vivo en el navegador
+- [ ] Motor de módulos y los primeros módulos
+- [ ] Cuentas con login de GitHub y progreso guardado
+- [ ] Instaladores (Homebrew, script)
+
+</details>
+
+<p>
+  <code>Go</code> <code>client-go</code> <code>kind</code> <code>Cobra</code> <code>WebSocket</code> <code>Kubernetes</code>
+</p>
+
+## `~/proyectos/smashgt`
 
 <table>
   <tr>
-    <td width="50%" valign="top">
+    <td width="45%" valign="top">
       <a href="https://smashgt.pages.dev"><img src="assets/smashgt.jpg" alt="Portada de SmashGT"></a>
-      <h3><a href="https://github.com/jordonez-usac/SmashGT">SmashGT</a></h3>
-      <p>La escena competitiva de Super Smash Bros. Ultimate en Guatemala, en un solo sitio: ranking nacional, perfiles de jugadores, historial cara a cara y mapa de torneos por departamento.</p>
-      <p>
-        <a href="https://smashgt.pages.dev"><img src="https://img.shields.io/badge/Ver_el_sitio-87CF3E?style=for-the-badge&logo=cloudflarepages&logoColor=white" alt="Ver el sitio"></a>
-        <a href="https://github.com/jordonez-usac/SmashGT"><img src="https://img.shields.io/badge/C%C3%B3digo-1c1c1c?style=for-the-badge&logo=github&logoColor=white" alt="Código"></a>
-      </p>
-      <details>
-        <summary><b>Qué hace</b></summary>
-        <br>
-        <ul>
-          <li>Ranking nacional con el main de cada jugador</li>
-          <li>Perfiles con resultados y rivales más frecuentes</li>
-          <li>Comparación cara a cara entre dos jugadores</li>
-          <li>Mapa de torneos próximos y recientes por departamento</li>
-          <li>Top 8 de los torneos, noticias y una guía para el primer torneo</li>
-          <li>Panel de administración para los organizadores</li>
-        </ul>
-      </details>
-      <details>
-        <summary><b>Stack</b></summary>
-        <br>
-        <code>React 19</code> <code>Vite</code> <code>Tailwind CSS 4</code> <code>Express 5</code> <code>MongoDB Atlas</code> <code>JWT</code> <code>Cloudflare Pages</code> <code>Render</code>
-      </details>
     </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/kubetrek/kubetrek"><img src="assets/kubi.jpg" alt="Kubi, el asistente de KubeTrek"></a>
-      <h3><a href="https://github.com/kubetrek/kubetrek">KubeTrek</a></h3>
-      <p>Aprende Kubernetes con un clúster real en tu máquina mientras la web te muestra en vivo cómo reacciona. Cada paso se verifica solo, y Kubi te acompaña con pistas.</p>
+    <td valign="top">
+      <h3><a href="https://github.com/jordonez-usac/SmashGT">SmashGT</a></h3>
+      <p>La escena competitiva de Super Smash Bros. Ultimate en Guatemala: ranking nacional, perfiles de jugadores, historial cara a cara y mapa de torneos por departamento.</p>
+      <p><code>React</code> <code>Tailwind CSS</code> <code>Express</code> <code>MongoDB</code></p>
       <p>
-        <a href="https://github.com/kubetrek/kubetrek"><img src="https://img.shields.io/badge/C%C3%B3digo-1c1c1c?style=for-the-badge&logo=github&logoColor=white" alt="Código"></a>
-        <img src="https://img.shields.io/badge/En_desarrollo-3a7bff?style=for-the-badge" alt="En desarrollo">
+        <a href="https://smashgt.pages.dev"><img src="https://img.shields.io/badge/Ver_el_sitio-3a7bff?style=for-the-badge&logo=cloudflarepages&logoColor=white" alt="Ver el sitio"></a>
+        <a href="https://github.com/jordonez-usac/SmashGT"><img src="https://img.shields.io/badge/C%C3%B3digo-0b1220?style=for-the-badge&logo=github&logoColor=white" alt="Código"></a>
       </p>
-      <details>
-        <summary><b>Cómo funciona</b></summary>
-        <br>
-        <pre>kind  &lt;-watch-  ktrek  -ws-&gt;  servidor  -ws-&gt;  navegador</pre>
-        <p>La CLI <code>ktrek</code> levanta un clúster con kind, vigila lo que haces con <code>kubectl</code> y lo transmite a la web, que dibuja Deployments, Pods y Services apareciendo y muriendo. Solo envía metadatos y estado, nunca el contenido de los Secrets.</p>
-      </details>
-      <details>
-        <summary><b>Stack</b></summary>
-        <br>
-        <code>Go</code> <code>client-go</code> <code>kind</code> <code>Cobra</code> <code>WebSocket</code> <code>Kubernetes</code>
-      </details>
     </td>
   </tr>
 </table>
@@ -91,7 +130,7 @@
 ## `~/actividad`
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=jordonez-usac&locale=es&background=1C1C1C&border=2F2F2F&stroke=2F2F2F&ring=87CF3E&fire=87CF3E&currStreakLabel=87CF3E&sideLabels=D0D0D0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=6F6F6F" alt="Racha de contribuciones">
+  <img src="https://streak-stats.demolab.com?user=jordonez-usac&locale=es&background=0B1220&border=16213A&stroke=16213A&ring=3A7BFF&fire=5FF3FF&currStreakLabel=4DA3FF&sideLabels=D6DEEB&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=6B7A99" alt="Racha de contribuciones">
 </p>
 
 <picture>
@@ -99,4 +138,4 @@
   <img src="https://raw.githubusercontent.com/jordonez-usac/jordonez-usac/output/snake.svg" width="100%" alt="Serpiente comiéndose el gráfico de contribuciones">
 </picture>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:1c1c1c,60:2f5a1f,100:87cf3e" width="100%" alt="">
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=0:0b1220,55:1f4fbf,100:5ff3ff" width="100%" alt="">

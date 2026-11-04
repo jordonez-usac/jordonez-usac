@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="470" viewBox="0 0 780 470" role="img" aria-label="juan@usac: neofetch">
   <title>juan@usac: neofetch</title>
   <style>
-    text { font-family: 'DejaVu Sans Mono', 'Ubuntu Mono', Menlo, Consolas, monospace; font-size: 14px; fill: #d0d0d0; white-space: pre; }
-    .g { fill: #87cf3e; font-weight: bold; }
-    .b { fill: #5fb3f9; }
-    .k { fill: #87cf3e; font-weight: bold; }
-    .d { fill: #6f6f6f; }
+    text { font-family: 'DejaVu Sans Mono', 'Ubuntu Mono', Menlo, Consolas, monospace; font-size: 14px; fill: #d6deeb; white-space: pre; }
+    .g { fill: #4da3ff; font-weight: bold; }
+    .b { fill: #5ff3ff; }
+    .k { fill: #4da3ff; font-weight: bold; }
+    .d { fill: #6b7a99; }
     .tux { font-size: 22px; fill: #e8e8e8; }
     .y { fill: #f5c542; }
     .r { opacity: 0; animation: in .3s ease-out forwards; }
@@ -21,8 +21,8 @@
     </clipPath>
   </defs>
 
-  <rect width="780" height="470" rx="10" fill="#1c1c1c"/>
-  <path d="M10 0h760a10 10 0 0 1 10 10v24H0V10A10 10 0 0 1 10 0z" fill="#2f2f2f"/>
+  <rect width="780" height="470" rx="10" fill="#0b1220"/>
+  <path d="M10 0h760a10 10 0 0 1 10 10v24H0V10A10 10 0 0 1 10 0z" fill="#16213a"/>
   <circle cx="22" cy="17" r="6" fill="#ff5f57"/>
   <circle cx="42" cy="17" r="6" fill="#febc2e"/>
   <circle cx="62" cy="17" r="6" fill="#28c840"/>
@@ -54,11 +54,11 @@
   <g class="r" style="animation-delay:2.8s"><text x="300" y="384" class="k">Ahora</text><text x="410" y="384">construyendo KubeTrek en Go</text></g>
 
   <g class="r" style="animation-delay:2.95s">
-    <rect x="300" y="400" width="26" height="16" fill="#1c1c1c" stroke="#3a3a3a"/>
+    <rect x="300" y="400" width="26" height="16" fill="#0b1220" stroke="#2a3a5a"/>
     <rect x="326" y="400" width="26" height="16" fill="#e5534b"/>
     <rect x="352" y="400" width="26" height="16" fill="#87cf3e"/>
     <rect x="378" y="400" width="26" height="16" fill="#f5c542"/>
-    <rect x="404" y="400" width="26" height="16" fill="#5fb3f9"/>
+    <rect x="404" y="400" width="26" height="16" fill="#5ff3ff"/>
     <rect x="430" y="400" width="26" height="16" fill="#c678dd"/>
     <rect x="456" y="400" width="26" height="16" fill="#56d4c4"/>
     <rect x="482" y="400" width="26" height="16" fill="#e8e8e8"/>
@@ -66,6 +66,6 @@
 
   <g class="r" style="animation-delay:3.1s">
     <text x="24" y="448"><tspan class="g">juan@usac</tspan>:<tspan class="b">~</tspan>$ </text>
-    <rect class="cursor" x="134" y="436" width="9" height="16" fill="#d0d0d0"/>
+    <rect class="cursor" x="134" y="436" width="9" height="16" fill="#d6deeb"/>
   </g>
 </svg>
