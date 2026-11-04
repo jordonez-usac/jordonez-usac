@@ -1,13 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="780" height="470" viewBox="0 0 780 470" role="img" aria-label="juan@usac: neofetch">
   <title>juan@usac: neofetch</title>
   <style>
-    text { font-family: 'DejaVu Sans Mono', 'Ubuntu Mono', Menlo, Consolas, monospace; font-size: 14px; fill: #d0d0d0; }
+    text { font-family: 'DejaVu Sans Mono', 'Ubuntu Mono', Menlo, Consolas, monospace; font-size: 14px; fill: #d0d0d0; white-space: pre; }
     .g { fill: #87cf3e; font-weight: bold; }
     .b { fill: #5fb3f9; }
     .k { fill: #87cf3e; font-weight: bold; }
     .d { fill: #6f6f6f; }
-    .tux { font-size: 22px; fill: #e8e8e8; white-space: pre; }
+    .tux { font-size: 22px; fill: #e8e8e8; }
     .y { fill: #f5c542; }
+    .r { opacity: 0; animation: in .3s ease-out forwards; }
+    .cursor { animation: blink 1.1s steps(1) infinite; }
+    @keyframes in { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+    @keyframes blink { 50% { opacity: 0; } }
   </style>
   <defs>
     <clipPath id="type">
@@ -27,33 +31,29 @@
   <text x="24" y="68"><tspan class="g">juan@usac</tspan>:<tspan class="b">~</tspan>$ </text>
   <text x="134" y="68" clip-path="url(#type)">neofetch</text>
 
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" begin="1.5s" dur="0.4s" fill="freeze"/>
-    <g>
-      <text class="tux" x="40" y="150">    .--.</text>
-      <text class="tux" x="40" y="180">   |o<tspan class="y">_</tspan>o |</text>
-      <text class="tux" x="40" y="210">   |:<tspan class="y">_/</tspan> |</text>
-      <text class="tux" x="40" y="240">  //   \ \</text>
-      <text class="tux" x="40" y="270"> (|     | )</text>
-      <text class="tux" x="40" y="300">/'\_   _/`\</text>
-      <text class="tux" x="40" y="330"><tspan class="y">\___)</tspan>=<tspan class="y">(___/</tspan></text>
-    </g>
+  <text class="tux r" style="animation-delay:1.5s" x="40" y="150">    .--.</text>
+  <text class="tux r" style="animation-delay:1.58s" x="40" y="180">   |o<tspan class="y">_</tspan>o |</text>
+  <text class="tux r" style="animation-delay:1.66s" x="40" y="210">   |:<tspan class="y">_/</tspan> |</text>
+  <text class="tux r" style="animation-delay:1.74s" x="40" y="240">  //   \ \</text>
+  <text class="tux r" style="animation-delay:1.82s" x="40" y="270"> (|     | )</text>
+  <text class="tux r" style="animation-delay:1.9s" x="40" y="300">/'\_   _/`\</text>
+  <text class="tux r" style="animation-delay:1.98s" x="40" y="330"><tspan class="y">\___)</tspan>=<tspan class="y">(___/</tspan></text>
 
-    <text x="300" y="108"><tspan class="g">juan</tspan>@<tspan class="g">usac</tspan></text>
-    <text x="300" y="128" class="d">--------------</text>
+  <g class="r" style="animation-delay:1.6s"><text x="300" y="108"><tspan class="g">juan</tspan>@<tspan class="g">usac</tspan></text></g>
+  <g class="r" style="animation-delay:1.7s"><text x="300" y="128" class="d">--------------</text></g>
+  <g class="r" style="animation-delay:1.8s"><text x="300" y="152" class="k">OS</text><text x="410" y="152">Linux Mint 22.3 x86_64</text></g>
+  <g class="r" style="animation-delay:1.9s"><text x="300" y="174" class="k">Shell</text><text x="410" y="174">zsh</text></g>
+  <g class="r" style="animation-delay:2.0s"><text x="300" y="196" class="k">DE</text><text x="410" y="196">Cinnamon</text></g>
+  <g class="r" style="animation-delay:2.1s"><text x="300" y="218" class="k">Carrera</text><text x="410" y="218">Ingeniería en Ciencias y Sistemas</text></g>
+  <g class="r" style="animation-delay:2.2s"><text x="300" y="240" class="k">Uni</text><text x="410" y="240">USAC, Guatemala</text></g>
+  <g class="r" style="animation-delay:2.3s"><text x="300" y="268" class="k">Lenguajes</text><text x="410" y="268">Go · JavaScript · Python · C++ · Java</text></g>
+  <g class="r" style="animation-delay:2.4s"><text x="300" y="290" class="k">Frontend</text><text x="410" y="290">React · Tailwind CSS · Vite</text></g>
+  <g class="r" style="animation-delay:2.5s"><text x="300" y="312" class="k">Backend</text><text x="410" y="312">Node.js · Express · MongoDB</text></g>
+  <g class="r" style="animation-delay:2.6s"><text x="300" y="334" class="k">DevOps</text><text x="410" y="334">Docker · Kubernetes · Linux</text></g>
+  <g class="r" style="animation-delay:2.7s"><text x="300" y="356" class="k">IoT</text><text x="410" y="356">Arduino · Raspberry Pi · MQTT</text></g>
+  <g class="r" style="animation-delay:2.8s"><text x="300" y="384" class="k">Ahora</text><text x="410" y="384">construyendo KubeTrek en Go</text></g>
 
-    <text x="300" y="152" class="k">OS</text><text x="410" y="152">Linux Mint 22.3 x86_64</text>
-    <text x="300" y="174" class="k">Shell</text><text x="410" y="174">zsh</text>
-    <text x="300" y="196" class="k">DE</text><text x="410" y="196">Cinnamon</text>
-    <text x="300" y="218" class="k">Carrera</text><text x="410" y="218">Ingeniería en Ciencias y Sistemas</text>
-    <text x="300" y="240" class="k">Uni</text><text x="410" y="240">USAC, Guatemala</text>
-    <text x="300" y="268" class="k">Lenguajes</text><text x="410" y="268">Go · JavaScript · Python · C++ · Java</text>
-    <text x="300" y="290" class="k">Frontend</text><text x="410" y="290">React · Tailwind CSS · Vite</text>
-    <text x="300" y="312" class="k">Backend</text><text x="410" y="312">Node.js · Express · MongoDB</text>
-    <text x="300" y="334" class="k">DevOps</text><text x="410" y="334">Docker · Kubernetes · Linux</text>
-    <text x="300" y="362" class="k">Proyectos</text><text x="410" y="362">SmashGT · KubeTrek</text>
-    <text x="300" y="384" class="k">Ahora</text><text x="410" y="384">construyendo KubeTrek en Go</text>
-
+  <g class="r" style="animation-delay:2.95s">
     <rect x="300" y="400" width="26" height="16" fill="#1c1c1c" stroke="#3a3a3a"/>
     <rect x="326" y="400" width="26" height="16" fill="#e5534b"/>
     <rect x="352" y="400" width="26" height="16" fill="#87cf3e"/>
@@ -62,10 +62,10 @@
     <rect x="430" y="400" width="26" height="16" fill="#c678dd"/>
     <rect x="456" y="400" width="26" height="16" fill="#56d4c4"/>
     <rect x="482" y="400" width="26" height="16" fill="#e8e8e8"/>
+  </g>
 
+  <g class="r" style="animation-delay:3.1s">
     <text x="24" y="448"><tspan class="g">juan@usac</tspan>:<tspan class="b">~</tspan>$ </text>
-    <rect x="134" y="436" width="9" height="16" fill="#d0d0d0">
-      <animate attributeName="opacity" values="1;0" dur="1.1s" calcMode="discrete" repeatCount="indefinite"/>
-    </rect>
+    <rect class="cursor" x="134" y="436" width="9" height="16" fill="#d0d0d0"/>
   </g>
 </svg>
